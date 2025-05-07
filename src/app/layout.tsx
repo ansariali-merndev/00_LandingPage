@@ -1,5 +1,6 @@
 import "./globals.css";
 import React from "react";
+import { Footer } from "../components/footer/Footer";
 
 type RootLayoutProps = {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <p>Header</p>
         {children}
-        <p>Footer</p>
+        <Footer />
       </body>
     </html>
   );
