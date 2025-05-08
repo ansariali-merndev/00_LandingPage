@@ -1,24 +1,9 @@
-"use client";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+import Animate from "./animate";
 
 export default function HeroSection() {
-  useEffect(() => {
-    const initAOS = async () => {
-      await import("aos");
-      AOS.init({
-        duration: 1000,
-        easing: "ease",
-        once: true,
-        anchorPlacement: "top-bottom",
-      });
-    };
-    initAOS();
-  }, []);
-
   return (
     <main className="grid sm:grid-cols-2 items-center text-white">
+      <Animate />
       <div data-aos="fade-up">
         <h2 className="text-2xl sm:text-6xl">
           Next-level audio, unmatched clarity
