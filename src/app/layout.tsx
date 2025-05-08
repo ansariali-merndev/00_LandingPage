@@ -3,6 +3,11 @@ import React from "react";
 import { Urbanist } from "next/font/google";
 import Navbar from "@/components/header/ResNav";
 
+export const metadata = {
+  title: "Landing Page",
+  description: "code and develop by Ansari Ali",
+};
+
 type RootLayoutProps = {
   children: React.ReactNode;
 };
