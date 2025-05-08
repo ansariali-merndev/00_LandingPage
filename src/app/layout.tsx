@@ -1,19 +1,23 @@
 import "./globals.css";
 import React from "react";
-import { Footer } from "../components/footer/Footer";
-import Navbar from "../components/header/ResponsiveNav";
+import { Urbanist } from "next/font/google";
+import Navbar from "@/components/header/ResNav";
 
 type RootLayoutProps = {
   children: React.ReactNode;
 };
 
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body>
+      <body className={urbanist.className}>
         <Navbar />
-        <section className="mx-2 sm:mx-4 md:mx-12 lg:mx-18">{children}</section>
-        <Footer />
+        {children}
       </body>
     </html>
   );
