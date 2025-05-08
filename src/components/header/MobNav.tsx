@@ -1,35 +1,35 @@
-"use client";
-import { AiOutlineClose } from "react-icons/ai";
-
 type props = {
-  isOpen: boolean;
-  onClose: () => void;
+  openNav: boolean;
+  handleClose: () => void;
 };
 
-export default function MobNav({ isOpen, onClose }: props) {
+export default function MobNav({ openNav, handleClose }: props) {
   return (
-    <div className="lg:hidden">
+    <div className="">
+      {/* overlay */}
       <div
-        className={`fixed inset-0 transform transition-all duration-300 z-[102] bg-black ${
-          isOpen ? "opacity-50" : "opacity-0"
-        }  w-full h-screen`}
+        className={`fixed inset-0 bg-black z-40 transition-opacity duration-500 ${
+          openNav ? "opacity-50" : "opacity-0 pointer-events-none"
+        }`}
       ></div>
       <div
-        className={`text-white fixed inset-0 flex flex-col justify-center h-full bg-indigo-600 w-[80%] sm:w-[60%] z-[1010] transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`bg-red-600 z-[1000] fixed inset-0 h-screen w-[80%] sm:w-[60%] text-white flex items-center pl-8 transition-transform duration-600 delay-300 ease-in-out ${
+          openNav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <span
-          className="absolute top-4 right-4 z-[1200] cursor-pointer"
-          onClick={onClose}
+          onClick={handleClose}
+          className="text-white text-4xl absolute top-4 right-4 cursor-pointer"
         >
-          <AiOutlineClose className="text-white h-8 w-8" />
+          &times;
         </span>
-        <p className="border-b cursor-pointer py-4 w-1/2 ml-16">Home</p>
-        <p className="border-b cursor-pointer py-4 w-1/2 ml-16">About</p>
-        <p className="border-b cursor-pointer py-4 w-1/2 ml-16">Features</p>
-        <p className="border-b cursor-pointer py-4 w-1/2 ml-16">Testimonials</p>
-        <p className="border-b cursor-pointer py-4 w-1/2 ml-16">Contact</p>
+        <ul className="w-full">
+          <li className="cursor-pointer border-b py-4 w-1/2">Home</li>
+          <li className="cursor-pointer border-b py-4 w-1/2">About</li>
+          <li className="cursor-pointer border-b py-4 w-1/2">Feature</li>
+          <li className="cursor-pointer border-b py-4 w-1/2">Testimonials</li>
+          <li className="cursor-pointer border-b py-4 w-1/2">Contact</li>
+        </ul>
       </div>
     </div>
   );

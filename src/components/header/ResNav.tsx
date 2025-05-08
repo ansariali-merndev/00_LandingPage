@@ -5,15 +5,10 @@ import MobNav from "./MobNav";
 import Nav from "./Nav";
 
 export default function Navbar() {
-  const [openMobNav, setOpenMobNav] = useState<boolean>(true);
+  const [openMobNav, setOpenMobNav] = useState<boolean>(false);
 
-  const handleOpen = () => {
-    setOpenMobNav(true);
-  };
-
-  const handleClose = () => {
-    setOpenMobNav(false);
-  };
+  const handleOpen = () => setOpenMobNav(true);
+  const handleClose = () => setOpenMobNav(false);
 
   useEffect(() => {
     console.log(openMobNav);
@@ -21,8 +16,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Nav onMenuClick={handleOpen} />
-      <MobNav isOpen={openMobNav} onClose={handleClose} />
+      <Nav handleOpen={handleOpen} />
+      <MobNav openNav={openMobNav} handleClose={handleClose} />
     </>
   );
 }

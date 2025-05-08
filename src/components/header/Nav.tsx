@@ -1,30 +1,33 @@
-import { IoCartOutline } from "react-icons/io5";
+import { BsCart2 } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 
 type props = {
-  onMenuClick: () => void;
+  handleOpen: () => void;
 };
 
-export default function Nav({ onMenuClick }: props) {
+export default function Nav({ handleOpen }: props) {
   return (
-    <header className="bg-red-700 text-white flex justify-between items-center px-4 sm:px-12 md:px-18 lg:px-24 h-[10vh] z-[100]">
-      <h2>Landing Page</h2>
+    <header className="bg-pink-700 text-white flex justify-between px-2 sm:px-8 md:px-14 lg:px-22 items-center h-[12vh]">
+      <p className="text-2xl font-semibold">Landing Page</p>
       <nav className="hidden lg:flex gap-12">
-        <span className="hover:text-green-300 cursor-pointer">Home</span>
-        <span className="hover:text-green-300 cursor-pointer">About</span>
-        <span className="hover:text-green-300 cursor-pointer">Features</span>
-        <span className="hover:text-green-300 cursor-pointer">
+        <span className="cursor-pointer hover:text-indigo-600">Home</span>
+        <span className="cursor-pointer hover:text-indigo-600">About</span>
+        <span className="cursor-pointer hover:text-indigo-600">Features</span>
+        <span className="cursor-pointer hover:text-indigo-600">
           Testimonials
         </span>
-        <span className="hover:text-green-300 cursor-pointer">Contact</span>
+        <span className="cursor-pointer hover:text-indigo-600">Contact</span>
       </nav>
-      <div className="flex gap-3 items-center">
-        <span className="flex items-center gap-2 bg-green-600 px-4 py-2 border cursor-pointer rounded-xl">
-          <IoCartOutline />
+      <div className="flex gap-4">
+        <span className="bg-green-600 flex items-center gap-2 px-4 py-2 border rounded-xl cursor-pointer hover:bg-indigo-600">
+          <BsCart2 />
           <button className="cursor-pointer">Buy Now</button>
         </span>
-        <button className="block lg:hidden" onClick={onMenuClick}>
-          <BiMenuAltRight className="h-8 w-8" />
+        <button className="inline-block lg:hidden">
+          <BiMenuAltRight
+            className="w-10 h-10 cursor-pointer"
+            onClick={handleOpen}
+          />
         </button>
       </div>
     </header>
