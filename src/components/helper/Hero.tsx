@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <main className="grid sm:grid-cols-2 items-center text-white">
       <Animate />
-      <div data-aos="fade-up">
+      <div className="my-12" data-aos="fade-up">
         <h2 className="text-2xl sm:text-6xl">
           Next-level audio, unmatched clarity
         </h2>

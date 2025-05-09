@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Touch to buy",
+    "description": "Instant purchases with just a tap — designed for seamless shopping on the go.",
+    "icon": "MdOutlineTouchApp"
+  },
+  {
+    "id": 2,
+    "title": "Secure Data",
+    "description": "Your personal data is protected with advanced encryption and multi-layered security.",
+    "icon": "FaDatabase"
+  },
+  {
+    "id": 3,
+    "title": "Instant Chat",
+    "description": "Get instant support from our team 24/7 via live chat — always here to help you.",
+    "icon": "FaRocketchat"
+  },
+  {
+    "id": 4,
+    "title": "Live Notification",
+    "description": "Stay updated with real-time notifications about offers, orders, and important updates.",
+    "icon": "IoMdNotifications"
+  },
+  {
+    "id": 5,
+    "title": "Wifi Support",
+    "description": "Enjoy uninterrupted functionality with full WiFi compatibility for smart devices.",
+    "icon": "FaWifi"
+  },
+  {
+    "id": 6,
+    "title": "App Watch",
+    "description": "Track and control features directly from your smartwatch for ultimate convenience.",
+    "icon": "CgAppleWatch"
+  }
+]
