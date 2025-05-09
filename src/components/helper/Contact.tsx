@@ -6,8 +6,8 @@ export default function Contact() {
           Contact Us
         </h2>
         <p className="text-gray-600 mb-10">
-          Fill the form below to get in touch with us. We'll respond as soon as
-          possible.
+          Fill the form below to get in touch with us. We&apos;ll respond as
+          soon as possible.
         </p>
 
         <form className=" rounded-lg p-8 space-y-6">
