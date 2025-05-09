@@ -1,7 +1,9 @@
 export function Footer() {
   return (
-    <footer>
-      <h2>This is a footer section</h2>
+    <footer className="bg-pink-700 py-8">
+      <h2 className="text-white text-center">
+        Design and Develop by Ansari Ali
+      </h2>
     </footer>
   );
 }

@@ -2,6 +2,7 @@ import "./globals.css";
 import React from "react";
 import { Urbanist } from "next/font/google";
 import Navbar from "@/components/header/ResNav";
+import { Footer } from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Landing Page",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={urbanist.className}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

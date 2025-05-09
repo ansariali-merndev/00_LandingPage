@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 type props = {
   openNav: boolean;
   handleClose: () => void;
@@ -24,11 +26,61 @@ export default function MobNav({ openNav, handleClose }: props) {
           &times;
         </span>
         <ul className="w-full">
-          <li className="cursor-pointer border-b py-4 w-1/2">Home</li>
-          <li className="cursor-pointer border-b py-4 w-1/2">About</li>
-          <li className="cursor-pointer border-b py-4 w-1/2">Feature</li>
-          <li className="cursor-pointer border-b py-4 w-1/2">Testimonials</li>
-          <li className="cursor-pointer border-b py-4 w-1/2">Contact</li>
+          <li className="cursor-pointer border-b py-4 w-1/2">
+            <Link
+              smooth={true}
+              duration={300}
+              offset={-200}
+              to="hero"
+              onClick={handleClose}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="cursor-pointer border-b py-4 w-1/2">
+            <Link
+              smooth={true}
+              duration={300}
+              offset={-150}
+              to="about"
+              onClick={handleClose}
+            >
+              About
+            </Link>
+          </li>
+          <li className="cursor-pointer border-b py-4 w-1/2">
+            <Link
+              smooth={true}
+              duration={300}
+              offset={-135}
+              to="features"
+              onClick={handleClose}
+            >
+              Features
+            </Link>
+          </li>
+          <li className="cursor-pointer border-b py-4 w-1/2">
+            <Link
+              smooth={true}
+              duration={300}
+              offset={-125}
+              to="testimonials"
+              onClick={handleClose}
+            >
+              Testimonials
+            </Link>
+          </li>
+          <li className="cursor-pointer border-b py-4 w-1/2">
+            <Link
+              smooth={true}
+              duration={300}
+              offset={-155}
+              to="contact"
+              onClick={handleClose}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

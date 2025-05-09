@@ -19,7 +19,7 @@ const iconMap: { [key: string]: IconType } = {
 
 export default function About() {
   return (
-    <div className="grid sm:grid-cols-3 gap-4 gap-y-12">
+    <div id="about" className="grid sm:grid-cols-3 gap-4 gap-y-12">
       <Animate />
       {data.map((item) => {
         const IconComponent = iconMap[item.icon];

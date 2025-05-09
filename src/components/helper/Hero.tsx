@@ -2,7 +2,10 @@ import Animate from "./animate";
 
 export default function HeroSection() {
   return (
-    <main className="grid sm:grid-cols-2 items-center text-white">
+    <main
+      id="hero"
+      className="grid sm:grid-cols-2 items-center mt-22 text-white"
+    >
       <Animate />
       <div className="my-12" data-aos="fade-up">
         <h2 className="text-2xl sm:text-6xl">
