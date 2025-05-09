@@ -23,7 +23,7 @@ const testimonials: Testimonial[] = [
     name: "Rahul Verma",
     role: "Tech Reviewer",
     message:
-      "The best audio experience I’ve had so far. Lightweight and powerful.",
+      "The best audio experience I ve had so far. Lightweight and powerful.",
   },
 ];
 
@@ -37,7 +37,7 @@ const TestimonialSection: React.FC = () => {
               key={index}
               className="bg-white text-gray-800 rounded-xl shadow-lg p-6 transition hover:scale-105 duration-300"
             >
-              <p className="italic mb-6">"{testimonial.message}"</p>
+              <p className="italic mb-6">&quot;{testimonial.message}&quot;</p>
               <h4 className="font-semibold text-lg">{testimonial.name}</h4>
               <p className="text-sm text-gray-500">{testimonial.role}</p>
             </div>

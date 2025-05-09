@@ -1,15 +1,16 @@
 import { TiTick } from "react-icons/ti";
 import Animate from "./animate";
+import Image from "next/image";
 
 export default function Features() {
   return (
     <>
       <Animate />
       <div id="features" className="grid sm:grid-cols-2 items-center">
-        <img
+        <Image
           data-aos="fade-up"
           className="w-[50%] mx-auto"
-          src="hero.webp"
+          src="/hero.webp"
           alt="hero-img"
         />
         <div data-aos="fade-up" className="text-gray-600">

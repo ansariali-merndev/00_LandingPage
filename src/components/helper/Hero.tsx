@@ -1,4 +1,5 @@
 import Animate from "./animate";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -28,7 +29,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <img
+      <Image
         data-aos="zoom-in"
         className="w-[60%] mx-auto"
         src="hero.webp"
